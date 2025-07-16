@@ -1,3 +1,19 @@
+#TODO App
+An app that takes in todo tasks.
+
+#Installation
+
+1. Clone Repo
+2. Navigate to the project directory
+3. Install dependencies
+
+#Run the development server
+
+1. Open up the project on your preferred IDE
+2. Enter the terminal
+3. Within the terminal run the following command, npm run dev
+4. The application is accessible at http://localhost:5173/
+
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
