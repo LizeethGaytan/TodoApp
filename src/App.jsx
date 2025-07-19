@@ -1,20 +1,23 @@
 import './App.css';
+{
+  /*imported TodoList component*/
+}
+import './TodoList';
+import TodoList from './TodoList';
+{
+  /*imported TodoForm component*/
+}
+import './TodoForm';
+import TodoForm from './TodoForm';
 
 function App() {
-  //todo array with 3 objects
-  const todos = [
-    { id: 1, title: 'water plants' },
-    { id: 2, title: 'exercise' },
-    { id: 3, title: 'study' },
-  ];
   return (
     <div>
       <h1>TO-DOS</h1>
-      <ul>
-        {todos.map((todo) => (
-          <li key={todo.id}>{todo.title}</li>
-        ))}
-      </ul>
+      {/*Added an instance of TodoForm*/}
+      <TodoForm />
+      {/*Added an instance of the TodoList*/}
+      <TodoList />
     </div>
   );
 }
