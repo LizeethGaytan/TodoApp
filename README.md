@@ -1,13 +1,14 @@
-#TODO App
+# TODO App
+
 An app that takes in todo tasks.
 
-#Installation
+# Installation
 
 1. Clone Repo
 2. Navigate to the project directory
 3. Install dependencies
 
-#Run the development server
+# Run the development server
 
 1. Open up the project on your preferred IDE
 2. Enter the terminal

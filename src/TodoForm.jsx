@@ -1,10 +1,10 @@
-/*TodoFrom component that returns a form*/
+//TodoFrom component, returns a form
 function TodoForm() {
   return (
     <form>
       <label htmlFor="todoTitle">Todo:</label>
       <input id="todoTitle"></input>
-      <button>Add Todo</button>
+      <button type="submit">Add Todo</button>
     </form>
   );
 }
