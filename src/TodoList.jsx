@@ -1,17 +1,12 @@
 import TodoListItem from './TodoListItem';
 //Created a basic structure for the TodoList component(basically a function)
-function TodoList() {
-  //todo array with 3 objects
-  const todos = [
-    { id: 1, title: 'water plants' },
-    { id: 2, title: 'exercise' },
-    { id: 3, title: 'study' },
-  ];
+function TodoList({ todoList }) {
+  // Prints todoList type in console
+  console.log(typeof todoList);
   return (
     <ul>
-      {todos.map((todo) => (
-        //<li key={todo.id}>{todo.title}</li>
-        <TodoListItem key={todo.id} title={todo.title} />
+      {todoList.map((todo) => (
+        <TodoListItem key={todo.id} todo={todo} />
       ))}
     </ul>
   );
