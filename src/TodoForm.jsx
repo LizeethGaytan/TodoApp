@@ -10,7 +10,7 @@ function TodoForm({ onAddTodo }) {
     event.preventDefault();
     const title = event.target.title.value;
     onAddTodo(title);
-    console.dir(title);
+
     event.target.title.value = '';
     todoTitleInput.current.focus();
   }
