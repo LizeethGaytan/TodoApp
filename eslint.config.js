@@ -31,7 +31,20 @@ export default defineConfig([
       },
     },
     // Added 3 specific rules above 'no-unused-vars' to the rules obj and 2 entries below it
+    // Added multiline wrap rules at the start
     rules: {
+      'react/jsx-wrap-multilines': [
+        'error',
+        {
+          declaration: 'parens-new-line',
+          assignment: 'parens-new-line',
+          return: 'parens-new-line',
+          arrow: 'parens-new-line',
+          condition: 'parens-new-line',
+          logical: 'parens-new-line',
+          prop: 'parens-new-line',
+        },
+      ],
       ...js.configs.recommended.rules,
       ...react.configs.recommended.rules,
       ...react.configs['jsx-runtime'].rules,
