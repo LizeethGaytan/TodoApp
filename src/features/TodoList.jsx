@@ -1,4 +1,4 @@
-import TodoListItem from './TodoListItem';
+import TodoListItem from '../TodoListItem';
 //Created a basic structure for the TodoList component(basically a function)
 function TodoList({ todoList, onCompleteTodo }) {
   // below variable contains an array of todo items that have not been completed/checked off
