@@ -1,6 +1,6 @@
 import { useRef } from 'react';
 import { useState } from 'react';
-
+import TextInputWithLabel from '../shared/TextInputWithLabel';
 // TodoFrom component, returns a form
 // Self Note: Invoking onAddTodo needs to be passed in as a prop could be done as (props) then called props.onAddTodo() or {onAddTodo} and called onAddTodo()?
 function TodoForm({ onAddTodo }) {
@@ -18,14 +18,13 @@ function TodoForm({ onAddTodo }) {
   return (
     // Added onSubmit event handler/listener and passed handleAddTodo function
     <form onSubmit={handleAddTodo}>
-      <label htmlFor="todoTitle">Todo:</label>
-      <input
-        id="todoTitle"
-        name="title"
+      <TextInputWithLabel
+        elementId="todoTitle"
         value={workingTodoTitle}
         ref={todoTitleInput}
         onChange={(e) => setWorkingTodoTitle(e.target.value)}
-      ></input>
+        labelText="Todo"
+      />
       <button type="submit" disabled={workingTodoTitle === ''}>
         Add Todo
       </button>

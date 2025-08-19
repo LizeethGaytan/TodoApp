@@ -1,6 +1,6 @@
-import TodoListItem from '../TodoListItem';
+import TodoListItem from './TodoListItem';
 //Created a basic structure for the TodoList component(basically a function)
-function TodoList({ todoList, onCompleteTodo }) {
+function TodoList({ todoList, onCompleteTodo, onUpdateTodo }) {
   // below variable contains an array of todo items that have not been completed/checked off
   const filteredTodoList = todoList.filter((todo) => !todo.isCompleted);
   return filteredTodoList.length === 0 ? (
@@ -14,6 +14,7 @@ function TodoList({ todoList, onCompleteTodo }) {
           todo={todo}
           todoList={todoList}
           onCompleteTodo={onCompleteTodo}
+          onUpdateTodo={onUpdateTodo}
         />
       ))}
     </ul>
