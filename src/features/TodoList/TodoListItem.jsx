@@ -5,20 +5,19 @@ function TodoListItem({ todo, onCompleteTodo, onUpdateTodo }) {
   const [workingTitle, setWorkingTitle] = useState(todo.title);
   // Event helper function, there's a difference b/w an event helper and handler function though both handle user interactions
   function handleCancel() {
-    workingTitle;
+    setWorkingTitle(todo.title);
     setIsEditing(false);
   }
   function handleEdit(event) {
     setWorkingTitle(event.target.value);
   }
   function handleUpdate(event) {
-    if (!isEditing) {
-      return;
+    if (isEditing) {
+      event.preventDefault();
+      // the below destructuring kind of helped me have a better understanding of destructuring
+      onUpdateTodo({ ...todo, title: workingTitle });
+      setIsEditing(false);
     }
-    event.preventDefault();
-    // the below destructuring kind of helped me have a better understanding of destructuring
-    onUpdateTodo({ ...todo, title: workingTitle });
-    setIsEditing(false);
   }
   return (
     <li>
